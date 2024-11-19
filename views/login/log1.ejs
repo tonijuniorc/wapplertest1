@@ -1,0 +1,127 @@
+<!-- Wappler include head-page="layouts/main" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="log1" appConnect="local" components="{dmxBootstrap5Navigation:{}}" -->
+<meta name="ac:route" content="/login/log1">
+<!-- Wappler include head-page="layouts/main" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="log1" appconnect="local" -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Regionais</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .table-actions button {
+            margin-right: 5px;
+        }
+
+        .page-header {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Sistema</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Painel de Usuário</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Configurações</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="container mt-4">
+        <div class="page-header">
+            <h1 class="h3">Cadastro de Regionais</h1>
+            <p>Gerencie as regionais cadastradas no sistema.</p>
+        </div>
+
+        <!-- Formulário de Cadastro -->
+        <div class="form-section">
+            <h4 class="mb-3">Nova Regional</h4>
+            <form>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="codigoRegional" class="form-label">Código Regional</label>
+                        <input type="text" class="form-control" id="codigoRegional" placeholder="Insira o código">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="tituloRegional" class="form-label">Título</label>
+                        <input type="text" class="form-control" id="tituloRegional" placeholder="Insira o título">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="abreviacaoRegional" class="form-label">Abreviação</label>
+                        <input type="text" class="form-control" id="abreviacaoRegional" placeholder="Insira a abreviação">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="statusRegional" class="form-label">Status</label>
+                        <select class="form-select" id="statusRegional">
+                            <option value="null">Selecione</option>
+                            <option selected="" value="ativo">Ativo</option>
+                            <option value="inativo">Inativo</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <button type="reset" class="btn btn-secondary">Cancelar</button>
+            </form>
+        </div>
+
+        <!-- Lista de Regionais -->
+        <h4 class="mt-5">Lista de Regionais</h4>
+        <table class="table table-striped">
+            <thead class="table-light">
+                <tr>
+                    <th>Código</th>
+                    <th>Título</th>
+                    <th>Abreviação</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#654321</td>
+                    <td>Norte 1</td>
+                    <td>N1</td>
+                    <td><span class="badge bg-success">Ativo</span></td>
+                    <td class="table-actions">
+                        <button class="btn btn-sm btn-warning">Editar</button>
+                        <button class="btn btn-sm btn-danger">Excluir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#654322</td>
+                    <td>Nordeste 2</td>
+                    <td>NR2</td>
+                    <td><span class="badge bg-success">Ativo</span></td>
+                    <td class="table-actions">
+                        <button class="btn btn-sm btn-warning">Editar</button>
+                        <button class="btn btn-sm btn-danger">Excluir</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>

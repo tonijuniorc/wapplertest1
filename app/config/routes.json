@@ -1,0 +1,31 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "page": "index",
+      "routeType": "page",
+      "layout": "main"
+    },
+    {
+      "path": "/page1",
+      "page": "page1",
+      "layout": "main"
+    },
+    {
+      "path": "/login/log1",
+      "page": "login/log1",
+      "layout": "main"
+    },
+    {
+      "path": "products",
+      "url": "",
+      "name": "Products"
+    },
+    {
+      "path": "/pageform1",
+      "page": "pageform1",
+      "layout": "main",
+      "method": "get"
+    }
+  ]
+}

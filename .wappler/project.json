@@ -1,0 +1,57 @@
+{
+  "projectName": "Project1",
+  "styleFile": "/css/style.css",
+  "assetsFolder": "/assets",
+  "designFramework": "bootstrap5",
+  "frameworks": [
+    {
+      "name": "fontawesome_5",
+      "type": "cdn"
+    },
+    {
+      "name": "bootstrap5",
+      "type": "local"
+    },
+    {
+      "name": "appConnect",
+      "type": "local"
+    }
+  ],
+  "hostingType": "docker",
+  "projectServerModel": "node",
+  "runtime": "capacitor",
+  "webRootFolder": "/public",
+  "useRouting": true,
+  "addBase": true,
+  "routingHandler": "node",
+  "projectLinksType": "site",
+  "targets": [
+    {
+      "name": "Development",
+      "remoteURL": "http://localhost:8100",
+      "webServerPort": 8100,
+      "webServerLang": "node",
+      "targetType": "docker",
+      "webServer": "node",
+      "NodeVersion": "lts",
+      "NodeOS": "alpine",
+      "webLoggingMaxFiles": "5",
+      "webLoggingMaxFileSize": "10m",
+      "dockerTimezone": "Etc/UTC",
+      "databaseConnectionType": "custom",
+      "databaseType": "postgres",
+      "db_host": "aws-0-sa-east-1.pooler.supabase.com",
+      "db_port": "6543",
+      "db_user": "postgres.hihismygmzejroddtfdt",
+      "db_password": "Jabama050*ja",
+      "db_database": "postgres",
+      "NodeImageType": "slim"
+    }
+  ],
+  "activeTarget": "Development",
+  "projectType": "web",
+  "extensions": [],
+  "resources": {
+    "providers": {}
+  }
+}

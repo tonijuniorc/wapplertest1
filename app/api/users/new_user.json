@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "$_POST": [
+      {
+        "type": "text",
+        "name": "name"
+      },
+      {
+        "type": "text",
+        "name": "email"
+      },
+      {
+        "type": "text",
+        "name": "senha"
+      }
+    ]
+  },
+  "exec": {
+    "steps": {
+      "name": "insert_users",
+      "module": "dbupdater",
+      "action": "insert",
+      "options": {
+        "connection": "db",
+        "sql": {
+          "type": "insert",
+          "values": [
+            {
+              "table": "user",
+              "column": "name",
+              "type": "text",
+              "value": "{{$_POST.name}}"
+            },
+            {
+              "table": "user",
+              "column": "email",
+              "type": "text",
+              "value": "{{$_POST.email}}"
+            },
+            {
+              "table": "user",
+              "column": "senha",
+              "type": "text",
+              "value": "{{$_POST.senha.md5()}}"
+            }
+          ],
+          "table": "user",
+          "returning": "id",
+          "query": "insert into \"user\" (\"email\", \"name\", \"senha\") values (?, ?, ?) returning \"id\"",
+          "params": [
+            {
+              "name": ":P1",
+              "type": "expression",
+              "value": "{{$_POST.name}}",
+              "test": ""
+            },
+            {
+              "name": ":P2",
+              "type": "expression",
+              "value": "{{$_POST.email}}",
+              "test": ""
+            },
+            {
+              "name": ":P3",
+              "type": "expression",
+              "value": "{{$_POST.senha.md5()}}",
+              "test": ""
+            }
+          ]
+        }
+      },
+      "meta": [
+        {
+          "name": "identity",
+          "type": "text"
+        },
+        {
+          "name": "affected",
+          "type": "number"
+        }
+      ]
+    }
+  }
+}

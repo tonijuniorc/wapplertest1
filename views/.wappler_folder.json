@@ -1,0 +1,10 @@
+{
+  "page1.ejs": {
+    "layoutPage": "main",
+    "description": ""
+  },
+  "pageform1.ejs": {
+    "layoutPage": "main",
+    "description": ""
+  }
+}
